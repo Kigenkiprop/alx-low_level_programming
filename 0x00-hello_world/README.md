@@ -1,1 +1,1 @@
-This project contains C basic scripts
+This directory contains several C programming solutions for class
