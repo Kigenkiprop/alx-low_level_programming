@@ -1,26 +1,31 @@
 #include <stdio.h>
+
 /**
- * main - fabonachi
- * @void: null
- * Return: Always 0.
+ * main - Entry point
+ * Return: Always 0 (success)
  */
+
 int main(void)
 {
-	long int num1 = 1, num2 = 2, count = 0, sum = 0, total = 2;
+	unsigned long fib1, fib2, fibsum;
+	float tot_sum;
 
-	while (sum < 4000000)
+	fib1 = 0;
+	fib2 = 1;
+
+	while (1)
 	{
-		sum = num1 + num2;
-		num1 = num2;
-		num2 = sum;
-		if (sum % 2 == 0)
-		{
-			total = total + sum;
-		}
-		count++;
-	}
-	printf("%li", total);
+		fibsum = fib1 + fib2;
+		if (fibsum > 4000000)
+			break;
 
-	putchar('\n');
+		if ((fibsum % 2) == 0)
+			tot_sum += fibsum;
+
+		fib1 = fib2;
+		fib2 = fibsum;
+	}
+	printf("%.0f\n", tot_sum);
+
 	return (0);
 }

@@ -1,28 +1,21 @@
 #include "main.h"
-#include <limits.h>
 
 /**
- * print_last_digit - print the last digit of n
- *
- * @n: any number as para n
- * Return: n%10 if n>=0, -n%10 if n<0
+ * print_last_digit - Function to print the last digit
+ * @n: Integer to be evaluate
+ * Return: Returns the last digit
  */
+
 int print_last_digit(int n)
 {
-	if (n < 0)
-	{
-		if (n == INT_MIN)
-		{
-			long m = INT_MAX;
+	int last_digit;
 
-			m++;
-			_putchar(m % 10 + '0');
-			return (m % 10);
-		}
-		n = -n;
-		_putchar(n % 10 + '0');
-		return (n % 10);
-	}
-	_putchar(n % 10 + '0');
-	return (n % 10);
+	last_digit = (n % 10);
+
+	if (last_digit < 0)
+		last_digit *= -1;
+
+	_putchar('0' + last_digit);
+
+	return (last_digit);
 }

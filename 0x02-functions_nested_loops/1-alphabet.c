@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * print_alphabet - print all lowercase letters
- *
- * Return: null.
+ * print_alphabet - Function to list alphabets
+ * Return: Does not return any value(s)
  */
 
 void print_alphabet(void)
 {
-	int stop = 122, count = 97;
+	char ch;
 
-	while (count <= stop)
+	ch = 'a';
+
+	while (ch <= 'z')
 	{
-		_putchar(count);
-		count++;
+		_putchar(ch);
+		ch++;
 	}
 	_putchar('\n');
 }

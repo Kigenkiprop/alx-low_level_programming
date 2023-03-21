@@ -1,1 +1,1 @@
-0x03-debugging is intersting 
+Debugging readme file

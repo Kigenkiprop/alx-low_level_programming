@@ -1,16 +1,21 @@
 #include "main.h"
 
 /**
- * _isalpha - check is the char is letter or not
- *
- * @c: the char parameter
- * Return: 1 if c is letter, 0 if c is not letter.
+ * _isalpha - Function to check for letter
+ * Return: 1 If the character is letter(s)
+ * @c: A character to be evaluated
  */
+
 int _isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'z'))
+	if (((c >= 'a') && (c <= 'z')) ||
+			((c >= 'A') && (c <= 'Z')))
 	{
 		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
+	_putchar('\n');
 }

@@ -1,23 +1,32 @@
 #include <stdio.h>
+
 /**
- * main - fabonachi
- * @void: null
- * Return: Always 0.
+ * main - Entry Point
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	long int num1 = 1, num2 = 2, count = 0, sum;
+	unsigned long n;
+	unsigned long f;
+	unsigned long sum;
+	int counter;
 
-	printf("%li, %li", num1, num2);
-	while (count < 48)
+	n = 0;
+	f = 1;
+
+	for (counter = 0; counter < 50; counter++)
 	{
-		sum = num1 + num2;
+		sum = n + f;
+		printf("%lu", sum);
 
-		printf(", %li", sum);
-		num1 = num2;
-		num2 = sum;
-		count++;
+		n = f;
+		f = sum;
+
+		if (counter == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	putchar('\n');
 	return (0);
 }

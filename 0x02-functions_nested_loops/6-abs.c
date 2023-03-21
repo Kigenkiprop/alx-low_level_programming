@@ -1,17 +1,20 @@
 #include "main.h"
 
 /**
- * _abs - to get the abs of number n
- *
- * @n: any number as n
- * Return: -n if n < 0, n if n >=0
+ * _abs - Function to check absolute value of an integer
+ * @i: An Integer value to be evaluated
+ * Return: An Absolute value of the integer i
  */
-int _abs(int n)
+
+int _abs(int i)
 {
-	if (n < 0)
+	if (i >= 0)
 	{
-		n = -n;
-		return (n);
+		return (i);
 	}
-	return (n);
+	else
+	{
+		return (-i);
+	}
+	return (0);
 }
