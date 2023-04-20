@@ -1,26 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
- * f - Function to print the name
- * @name: Array of characters to be printed
- */
-
-void f(char *name)
-{
-	printf("%s", name);
-}
-
-/**
- * print_name - Funtion to print a name
- * @name: Array characters to be printed
- * @f: Pointer to function to print name
+ * print_name - prints a name
+ * @name: name's main
+ * @f: void function
  */
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != NULL && f != NULL)
+	if (name && f)
+	{
 		f(name);
-	else
-		return;
+	}
 }
